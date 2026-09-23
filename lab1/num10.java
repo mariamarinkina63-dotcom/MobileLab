@@ -11,7 +11,7 @@ public class num10 {
         System.out.print("Введите количество чисел в последовательности: ");
         int count = sc.nextInt();
 
-        System.out.println("Введите " + count + " чисел последовательности:");
+        System.out.println("Введите " + count + " чисел (пятизначных) последовательности:");
         int found = 0;
 
         for (int i = 0; i < count; i++) {
