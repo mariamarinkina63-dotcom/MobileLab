@@ -1,6 +1,5 @@
 package org.example;
-/*Определить класс Вектор. Реализовать методы инкремента, декремента, индексирования. Определить массив из m объектов. Каждую из пар векторов передать в методы, возвращающие их скалярное произведение и длины. Вычислить и вывести углы между векторами.
-*/
+
 import java.util.Scanner;
 import java.util.Random;
 
@@ -39,7 +38,7 @@ public class Main {
                     + ", длина = " + VectorMath.length(vectors[i]));
         }
 
-        System.out.println("\nДемонстрация increment/decrement на первом векторе:");
+        System.out.println("\nДемонстрация increment/decrement:");
         Vector demo = new Vector(new double[vectors[0].size()]);
         for (int k = 0; k < vectors[0].size(); k++) demo.set(k, vectors[0].get(k));
         System.out.println("Было:      " + demo);
@@ -54,14 +53,13 @@ public class Main {
                 Vector a = vectors[i];
                 Vector b = vectors[j];
 
-                double dot = VectorMath.dot(a, b);
-                double lenA = VectorMath.length(a);
-                double lenB = VectorMath.length(b);
-                double angle = VectorMath.angleDegrees(a, b);
-
                 System.out.printf(
                         "Пара (v%d, v%d): скалярное = %.3f, |v1| = %.3f, |v2| = %.3f, угол = %.2f°%n",
-                        i + 1, j + 1, dot, lenA, lenB, angle
+                        i + 1, j + 1,
+                        VectorMath.dot(a, b),
+                        VectorMath.length(a),
+                        VectorMath.length(b),
+                        VectorMath.angleDegrees(a, b)
                 );
             }
         }
