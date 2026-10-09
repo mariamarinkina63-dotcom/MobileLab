@@ -1,12 +1,6 @@
 .idea/
-<<<<<<< HEAD
 *.iml
 out/
 target/
-=======
-out/
-target/
-*.iml
->>>>>>> 63ab5d392c7b56b679c234b333fa7999bc8ab309
 *.class
 .DS_Store
